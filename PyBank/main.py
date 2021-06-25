@@ -34,21 +34,19 @@ for index, change in enumerate(changes):
 
 average_change = round(total_change / len(changes), 2)
 
-print("Financial Analysis")
-print("-----------------------------")
-print(f"Total Months: {len(dates)-1}")
-print(f"Total: ${net_total}")
-print(f"Average Change: ${average_change}")
-print(f"Greatest Increase in Profits: {max_inc_month} (${max_increase})")
-print(f"Greatest Decrease in Profits: {max_dec_month} (${max_decrease})")
+lines = []
 
-output_path = os.path.join("Analysis","pybank_results.csv")
+lines.append("Financial Analysis")
+lines.append("-----------------------------")
+lines.append( "Total Months: " + str(len(dates)-1))
+lines.append("Total: $" + str(net_total))
+lines.append("Average Change: $" + str(average_change))
+lines.append("Greatest Increase in Profits: " + max_inc_month + " ($" + str(max_increase) + ")")
+lines.append("Greatest Decrease in Profits: " + max_dec_month + " ($" + str(max_decrease) + ")")
 
-with open(output_path, "w", newline = "") as csvfile:
-    csvwriter = csv.writer(csvfile,delimiter = ",")
-    csvwriter.writerow(["Financial Analysis"])
-    csvwriter.writerow(["Total Months", len(dates)-1])
-    csvwriter.writerow(["Total", net_total])
-    csvwriter.writerow(["Average Change", average_change])
-    csvwriter.writerow(["Greatest Increase in Profits", max_inc_month, max_increase])
-    csvwriter.writerow(["Greatest Decrease in Profits", max_dec_month, max_decrease])
+output_path = os.path.join("Analysis","pybank_results.txt")
+
+with open(output_path, "w", newline = "") as txtfile:
+    for line in lines:
+        txtfile.writelines([line+"\n"])
+        print(line)
