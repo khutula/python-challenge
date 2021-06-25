@@ -41,3 +41,14 @@ print(f"Total: ${net_total}")
 print(f"Average Change: ${average_change}")
 print(f"Greatest Increase in Profits: {max_inc_month} (${max_increase})")
 print(f"Greatest Decrease in Profits: {max_dec_month} (${max_decrease})")
+
+output_path = os.path.join("Analysis","pybank_results.csv")
+
+with open(output_path, "w", newline = "") as csvfile:
+    csvwriter = csv.writer(csvfile,delimiter = ",")
+    csvwriter.writerow(["Financial Analysis"])
+    csvwriter.writerow(["Total Months", len(dates)-1])
+    csvwriter.writerow(["Total", net_total])
+    csvwriter.writerow(["Average Change", average_change])
+    csvwriter.writerow(["Greatest Increase in Profits", max_inc_month, max_increase])
+    csvwriter.writerow(["Greatest Decrease in Profits", max_dec_month, max_decrease])
