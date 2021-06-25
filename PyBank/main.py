@@ -34,4 +34,10 @@ for index, change in enumerate(changes):
 
 average_change = round(total_change / len(changes), 2)
 
-print(max_inc_month, max_dec_month)
+print("Financial Analysis")
+print("-----------------------------")
+print(f"Total Months: {len(dates)-1}")
+print(f"Total: ${net_total}")
+print(f"Average Change: ${average_change}")
+print(f"Greatest Increase in Profits: {max_inc_month} (${max_increase})")
+print(f"Greatest Decrease in Profits: {max_dec_month} (${max_decrease})")
