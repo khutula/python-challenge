@@ -13,3 +13,6 @@ with open(csvpath, newline="",encoding = 'utf-8') as csvfile:
             candidates[row[2]] += 1
         elif row[2] != "Candidate": 
             candidates[row[2]] = 1
+
+for candidate, votes in candidates.items():
+    vote_count += votes
