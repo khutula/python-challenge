@@ -36,5 +36,9 @@ print_lines.append("-----------------------------")
 print_lines.append("Winner: " + winner)
 print_lines.append("-----------------------------")
 
-for line in print_lines:
-    print(line)
+output_path = os.path.join("Analysis","pypoll_results.txt")
+
+with open(output_path, "w") as txtfile:       
+    for line in print_lines:
+        txtfile.writelines([line+"\n"])
+        print(line)
