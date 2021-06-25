@@ -3,8 +3,9 @@ import csv
 
 vote_count = 0
 candidates = {}
-vote_percent = []
+vote_percent = 0
 highest_votes = 0
+print_lines = []
 
 csvpath = os.path.join("Resources","election_data.csv")
 
@@ -22,6 +23,18 @@ for candidate, votes in candidates.items():
         winner = candidate
         highest_votes = votes
 
-for candidate, votes in candidates.items():
-    vote_percent.append(round(votes/vote_count*100,3))
+print_lines.append("Election Results")
+print_lines.append("-----------------------------")
+print_lines.append("Total Votes: " + str(vote_count))
+print_lines.append("-----------------------------")
 
+for candidate, votes in candidates.items():
+    vote_percent = round(votes/vote_count*100,3)
+    print_lines.append(candidate + ": " + str(vote_percent) + "% (" + str(votes) + ")")
+
+print_lines.append("-----------------------------")
+print_lines.append("Winner: " + winner)
+print_lines.append("-----------------------------")
+
+for line in print_lines:
+    print(line)
