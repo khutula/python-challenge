@@ -12,13 +12,16 @@ csvpath = os.path.join("Resources","election_data.csv")
 with open(csvpath, newline="",encoding = 'utf-8') as csvfile:
     csvreader = csv.reader(csvfile,delimiter=",")
 
+    # skip header row
+    header = next(csvreader)
+
     # each row is looped through: each candidate voted for is stored in a dictionary
     for row in csvreader:
 
         # if the candidate is already in the dictionary, their vote count is increased by one; else the candidate is added to the dictionary with a vote of 1 (excluding header row)
         if candidates.get(row[2], False):
             candidates[row[2]] += 1
-        elif row[2] != "Candidate": 
+        else: 
             candidates[row[2]] = 1
 
 # set variables for recording total vote count & highest number of votes
