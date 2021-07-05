@@ -49,9 +49,11 @@ This project uses:
 
 <a name="results"></a>
 ### Results
-
+Below are screenshots of the example results for each challenge
 * PyBank Example Results:
+
 ![PyBank_Example_Results.PNG](PyBank_Example_Results.PNG)
 
 * PyPoll Example Results:
+
 ![PyPoll_Example_Results.PNG](PyPoll_Example_Results.PNG)
