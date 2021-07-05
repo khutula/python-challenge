@@ -40,12 +40,12 @@ This project uses:
 
 <a name="files"></a>
 ### Files
-* [budget_data.csv](PyBank\Resources\budget_data.csv): raw data file for PyBank code containing columns of Date and Profit/Losses
-* [PyBank - main.py](PyBank\main.py): Python script created for the PyBank challenge
-* [pybank_results.txt](PyBank\Analysis\pybank_results.txt): output text file from the PyBank Python script
-* [election_data.csv](PyPoll\Resources\election_data.csv): raw data file for PyPoll code containing columns of Voter ID, County, and Candidate
-* [PyPoll - main.py](PyPoll\main.py): Python script created for the PyPoll challenge
-* [pypoll_results.txt](PyPyPoll\Analysis\pypoll_results.txt): output text file from the PyPoll Python script
+* [budget_data.csv](PyBank/Resources/budget_data.csv): raw data file for PyBank code containing columns of Date and Profit/Losses
+* [PyBank - main.py](PyBank/main.py): Python script created for the PyBank challenge
+* [pybank_results.txt](PyBank/Analysis/pybank_results.txt): output text file from the PyBank Python script
+* [election_data.csv](PyPoll/Resources/election_data.csv): raw data file for PyPoll code containing columns of Voter ID, County, and Candidate
+* [PyPoll - main.py](PyPoll/main.py): Python script created for the PyPoll challenge
+* [pypoll_results.txt](PyPyPoll/Analysis/pypoll_results.txt): output text file from the PyPoll Python script
 
 <a name="results"></a>
 ### Results
